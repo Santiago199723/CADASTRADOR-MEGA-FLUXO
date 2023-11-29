@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-image: url("bg-signup.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Adicione a regra para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+  body {
+    background-attachment: fixed;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adicionado para ocupar a altura total da tela */
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 30px;
+  border-radius: 4%;
+  box-shadow: 3px 3px 1px 0px #000000a0;
+  width: 80%; /* Alterado para ocupar 80% da largura do container */
+  max-width: 400px; /* Adicionado para limitar a largura máxima */
+  text-align: center; /* Centralizado o texto */
+  margin: 0 auto; /* Centralizado horizontalmente */
+}
+
+h1 {
+  color: #6ee372;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 20px;
+}
+
+.label-float input {
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border-bottom: 2px solid #8bc34a;
+  background-color: transparent;
+  outline: none;
+  font-size: 16px;
+  transition: all .3s ease-out;
+  color: #8bc34a;
+}
+
+.label-float {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.label-float input:focus {
+  border-bottom: 2px solid #4caf50;
+}
+
+.label-float label {
+  color: #8bc34a;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .3s ease-out;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label {
+  font-size: 13px;
+  margin-top: 0;
+  color: #4caf50;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid #50e655;
+  color: #50e655;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: all .4s ease-out;
+}
+
+button:hover {
+  background-color: #50e655;
+  color: #fff;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-eye {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  cursor: pointer;
+  color: #4caf50;
+}
+
+#msgError,
+#msgSuccess {
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 20px;
+  display: none;
+}
+
+#msgError {
+  color: rgb(17, 60, 9);
+  background-color: rgba(113, 249, 83, 0.902);
+}
+
+#msgSuccess {
+  color: #00bb00;
+  background-color: #bbffbe;
+}
