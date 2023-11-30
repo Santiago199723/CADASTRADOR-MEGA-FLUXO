@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=swap'); /* Adicionando a fonte Dancing Script */
 
 * {
   margin: 0;
@@ -11,67 +11,64 @@ body {
   background-image: url("bg-signup.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-}
-
-/* Adicione a regra para dispositivos móveis */
-@media only screen and (max-width: 768px) {
-  body {
-    background-attachment: fixed;
-  }
+  background-attachment: fixed;
 }
 
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh; /* Adicionado para ocupar a altura total da tela */
+  width: 100%;
+  margin-top: 100px;
 }
 
 .card {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9); /* Ajuste a opacidade conforme necessário */
   padding: 30px;
   border-radius: 4%;
   box-shadow: 3px 3px 1px 0px #000000a0;
-  width: 80%; /* Alterado para ocupar 80% da largura do container */
-  max-width: 400px; /* Adicionado para limitar a largura máxima */
-  text-align: center; /* Centralizado o texto */
-  margin: 0 auto; /* Centralizado horizontalmente */
+  width: 400px;
 }
 
 h1 {
-  color: #6ee372;
-  font-family: 'Dancing Script', cursive;
+  text-align: center;
   margin-bottom: 20px;
+  color: #6ee372; /* Verde mais claro */
+  font-family: 'Dancing Script', cursive; /* Usando a fonte Dancing Script para o título */
 }
 
 .label-float input {
   width: 100%;
-  padding: 10px;
+  padding: 5px 5px;
+  display: inline-block;
   border: 0;
-  border-bottom: 2px solid #8bc34a;
+  border-bottom: 2px solid #8bc34a; /* Verde mais claro */
   background-color: transparent;
   outline: none;
+  min-width: 180px;
   font-size: 16px;
   transition: all .3s ease-out;
-  color: #8bc34a;
+  border-radius: 0;
+  color: #8bc34a; /* Verde mais claro */
 }
 
 .label-float {
   position: relative;
-  margin-bottom: 20px;
+  padding-top: 13px;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .label-float input:focus {
-  border-bottom: 2px solid #4caf50;
+  border-bottom: 2px solid #4caf50; /* Verde mais claro ao focar */
 }
 
 .label-float label {
-  color: #8bc34a;
-  pointer-events: none;
+  color: #8bc34a; /* Verde mais claro */
+  pointer-event: none;
   position: absolute;
   top: 0;
   left: 0;
+  margin-top: 13px;
   transition: all .3s ease-out;
 }
 
@@ -79,16 +76,17 @@ h1 {
 .label-float input:valid + label {
   font-size: 13px;
   margin-top: 0;
-  color: #4caf50;
+  color: #4caf50; /* Verde mais claro */
 }
 
 button {
   background-color: transparent;
-  border: 2px solid #50e655;
-  color: #50e655;
-  padding: 10px 20px;
+  border-color: #50e655; /* Verde mais claro */
+  color: rgb(32, 241, 53);
+  padding: 7px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12pt;
+  margin-top: 20px;
   border-radius: 4px;
   cursor: pointer;
   outline: none;
@@ -96,7 +94,7 @@ button {
 }
 
 button:hover {
-  background-color: #50e655;
+  background-color: rgb(80, 239, 48); /* Verde mais claro ao passar o mouse */
   color: #fff;
 }
 
@@ -110,24 +108,23 @@ button:hover {
   top: 15px;
   right: 10px;
   cursor: pointer;
-  color: #4caf50;
-}
-
-#msgError,
-#msgSuccess {
-  text-align: center;
-  padding: 10px;
-  border-radius: 4px;
-  margin-top: 20px;
-  display: none;
+  color: #4caf50; /* Verde mais claro */
 }
 
 #msgError {
+  text-align: center;
   color: rgb(17, 60, 9);
   background-color: rgba(113, 249, 83, 0.902);
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
 }
 
 #msgSuccess {
+  text-align: center;
   color: #00bb00;
   background-color: #bbffbe;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
 }

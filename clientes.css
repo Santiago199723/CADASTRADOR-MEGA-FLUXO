@@ -25,7 +25,6 @@ body {
   padding: 20px;
   width: 80%;
   text-align: center;
-  overflow-x: auto; /* Adicionado para permitir rolagem horizontal em dispositivos pequenos */
 }
 
 /* Estilo do cabeçalho h2 */
@@ -69,23 +68,23 @@ h2 {
 
 /* Larguras específicas para as colunas da tabela de clientes */
 .cliente-selecao {
-  width: 10px;
+  width: 10px; /* Ajuste conforme necessário */
 }
 
 .cliente-numero {
-  width: 10%; /* Ajuste conforme necessário */
+  width: 50px;
 }
 
 .cliente-nome {
-  width: 20%; /* Ajuste conforme necessário */
+  width: 150px; /* Ajuste conforme necessário */
 }
 
 .cliente-usuario {
-  width: 15%; /* Ajuste conforme necessário */
+  width: 100px; /* Ajuste conforme necessário */
 }
 
 .cliente-senha {
-  width: 15%; /* Ajuste conforme necessário */
+  width: 80px; /* Ajuste conforme necessário */
 }
 
 /* Estilo do botão de ação */
@@ -106,16 +105,4 @@ h2 {
 /* Efeito de hover para o botão de ação */
 .action-button:hover {
   background-color: #45a049;
-}
-
-/* Estilo para garantir que a tabela seja responsiva em dispositivos pequenos */
-@media only screen and (max-width: 768px) {
-  .clientes-table {
-    overflow-x: auto;
-  }
-
-  .clientes-table th,
-  .clientes-table td {
-    white-space: nowrap;
-  }
 }

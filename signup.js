@@ -110,7 +110,7 @@ function visualizarClientes() {
 }
 
 function voltarParaCadastro() {
-  window.location.href = 'index.html';
+  window.location.href = 'signup.html';
 }
 
 btn.addEventListener('click', () => {
